@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+    --background: 270 30% 97%;
+    --foreground: 270 25% 20%;
+
+    --card: 270 20% 95%;
+    --card-foreground: 270 25% 20%;
+
+    --popover: 270 30% 97%;
+    --popover-foreground: 270 25% 20%;
+
+    --primary: 270 20% 35%;
+    --primary-foreground: 270 30% 97%;
+
+    --secondary: 270 15% 92%;
+    --secondary-foreground: 270 20% 30%;
+
+    --muted: 270 12% 90%;
+    --muted-foreground: 270 10% 50%;
+
+    --accent: 270 25% 88%;
+    --accent-foreground: 270 20% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 15% 85%;
+    --input: 270 15% 85%;
+    --ring: 270 20% 60%;
+
+    --radius: 0.25rem;
+
+    /* Subpage background — warmer parchment */
+    --background-warm: 30 20% 96%;
+
+    /* Soft shadow */
+    --shadow-soft: 0 2px 12px -2px hsl(270 20% 60% / 0.08);
+
+    /* Poem line */
+    --poem-line: 270 20% 78%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out both;
+  }
+
+  .animate-fade-in-delay {
+    animation: fade-in 0.5s ease-out 0.15s both;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fade-in 0.5s ease-out 0.3s both;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-delay,
+  .animate-fade-in-delay-2 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
