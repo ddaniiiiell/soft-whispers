@@ -1,1 +1,54 @@
 
+{
+  "home": {
+    "title": "Soft Purple Archive",
+    "subtitleLines": [
+      "A quiet place for reflection.",
+      "Step into a gentle room of memories."
+    ],
+    "cta": {
+      "galleryLabel": "Gallery",
+      "poemsLabel": "Poems"
+    }
+  },
+  "gallery": {
+    "title": "Gallery of Memories",
+    "items": [
+      {
+        "id": "1",
+        "src": "images/placeholder-1.jpg",
+        "alt": "A soft purple sunset over a calm ocean",
+        "caption": "Fading light, August 2024."
+      },
+      {
+        "id": "2",
+        "src": "images/placeholder-2.jpg",
+        "alt": "A quiet room with lavender walls",
+        "caption": "The quiet room."
+      }
+    ]
+  },
+  "poems": {
+    "title": "Collected Verses",
+    "items": [
+      {
+        "id": "1",
+        "title": "The First Note",
+        "lines": [
+          "A whisper in the lavender field,",
+          "Time slows down here.",
+          "Take a breath."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Stillness",
+        "lines": [
+          "Shadows stretch across the floor,",
+          "The dust motes dance,",
+          "And we are still."
+        ]
+      }
+    ]
+  }
+}
