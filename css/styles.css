@@ -2,19 +2,19 @@
    1. DESIGN SYSTEM (CSS Variables)
    ========================================= */
 :root {
-  /* Soft Purple Palette */
-  --bg-home: #F8F6FA; 
-  --bg-subpages: #FDFCF8;
-  --text-primary: #4A3B4D; 
-  --text-secondary: #7A6B7D; 
-  --stroke: #D6CEDB; 
-  --hover-accent: #3A2B3D; 
-  --focus-ring: rgba(214, 206, 219, 0.7);
+  /* New "Light Pixel Purple" Palette */
+  --bg-home: #FBF8FD;       /* Very pale lavender-white */
+  --bg-subpages: #FDFBFE;   /* Even lighter, almost pure white-purple */
+  --text-primary: #6D5B7D;  /* Muted medium purple for main text */
+  --text-secondary: #9A8BADD; /* Soft lilac for subtitles/captions */
+  --stroke: #DED5E8;        /* Light purple for button borders & lines */
+  --hover-accent: #BFAFD4;  /* Slightly richer purple for hovers */
+  --focus-ring: rgba(191, 175, 212, 0.6); /* Soft purple focus glow */
   
-  /* Typography */
+  /* Typography (Unchanged) */
   --font-serif: "Playfair Display", "Georgia", serif;
   
-  /* Motion Specs (180-260ms ease-out per PRD) */
+  /* Motion Specs (Unchanged) */
   --transition-speed: 220ms;
   --transition-ease: ease-out;
 }
@@ -51,22 +51,24 @@ a {
    ========================================= */
 .btn {
   display: inline-block;
-  padding: 8px 12px;
-  border: none; /* Removes the box */
+  padding: 12px 32px; /* Slightly wider for a more elegant feel */
+  border: 1px solid var(--stroke); /* The thin border is back! */
   background: transparent;
   color: var(--text-primary);
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px; /* A little breathing room for the text */
+  text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-speed) var(--transition-ease);
 }
 
 .btn:hover {
-  color: var(--hover-accent);
+  border-color: var(--hover-accent);
+  background-color: rgba(222, 213, 232, 0.2); /* Very faint purple tint on hover */
+  color: var(--text-primary); /* Text color stays consistent */
   transform: translateY(-1px);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
+  box-shadow: 0 2px 8px rgba(109, 91, 125, 0.05); /* Subtle soft shadow */
 }
 
 .btn:active {
