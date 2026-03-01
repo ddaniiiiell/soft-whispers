@@ -6,9 +6,9 @@
       "Step into a gentle room of memories."
     ],
     "cta": {
-        "title": "Explore the Archive",
-        "galleryLabel": "Gallery",
-        "poemsLabel": "Poems"
+      "title": "Explore the Archive",
+      "galleryLabel": "Gallery",
+      "poemsLabel": "Poems"
     }
   },
   "gallery": {
