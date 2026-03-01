@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     subtitleContainer.appendChild(p);
                 });
 
+                // ---> HERE IS YOUR NEW TITLE LINE <---
+                document.getElementById('cta-title').textContent = data.home.cta.title;
+
                 document.getElementById('btn-gallery').textContent = data.home.cta.galleryLabel;
                 document.getElementById('btn-poems').textContent = data.home.cta.poemsLabel;
             }
