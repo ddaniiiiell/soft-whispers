@@ -239,16 +239,17 @@ a {
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* Ensures the dust doesn't block you from clicking buttons */
-  z-index: 0; /* Keeps it in the background */
+  pointer-events: none; 
+  z-index: 9999; /* Forces the dust to render ON TOP of the page */
   overflow: hidden;
 }
 
 .dust-mote {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.65); /* Soft, semi-transparent white */
+  /* Changed from white to a soft, visible blue to fix the camouflage issue */
+  background-color: rgba(133, 193, 233, 0.6); 
   border-radius: 50%;
-  filter: blur(2px); /* Gives it that out-of-focus, cinematic look */
+  filter: blur(2px); 
 }
 
 /* The falling animation */
