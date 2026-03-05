@@ -17,26 +17,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 document.getElementById('cta-title').textContent = data.home.cta.title;
 
+                document.getElementById('btn-birthday').textContent = data.home.cta.birthdayLabel;
                 document.getElementById('btn-gallery').textContent = data.home.cta.galleryLabel;
                 document.getElementById('btn-poems').textContent = data.home.cta.poemsLabel;
                 
+
                 // Setup the locked Anniversary button
                 const btnAnniversary = document.getElementById('btn-anniversary');
                 btnAnniversary.textContent = data.home.cta.anniversaryLabel;
                 
                 btnAnniversary.addEventListener('click', (e) => {
                     e.preventDefault(); 
-                    const passcode = prompt("enter the passcode :):");
+                    const passcode = prompt("enter the passcode :)");
                     
                     if (passcode !== null && passcode.toLowerCase() === "lavender") {
                         window.location.href = "anniversary.html";
                     } else if (passcode !== null) {
-                        alert("Incorrect passcode. The archive remains closed.");
+                        alert("nuh uh not yet");
                     }
                 });
             }
 
-            // 2. Populate Gallery Page
+            // 2. Populate Birthday Page
+            if (bodyId === 'page-birthday') {
+                document.getElementById('birthday-title').textContent = data.birthday.title;
+                const container = document.getElementById('birthday-container');
+                data.birthday.entries.forEach(entry => {
+                    const block = document.createElement('div');
+                    block.className = 'birthday-entry';
+                    block.innerHTML = `
+                        <div class="birthday-date">${entry.date}</div>
+                        <div class="birthday-text">${entry.text}</div>
+                    `;
+                    container.appendChild(block);
+                });
+            }
+
+            // 3. Populate Gallery Page
             if (bodyId === 'page-gallery') {
                 document.getElementById('gallery-title').textContent = data.gallery.title;
                 const grid = document.getElementById('gallery-grid');
@@ -51,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // 3. Populate Poems Page
+            // 4. Populate Poems Page
             if (bodyId === 'page-poems') {
                 document.getElementById('poems-title').textContent = data.poems.title;
                 const container = document.getElementById('poems-container');
@@ -67,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // 4. Populate Anniversary Page
+            // 5. Populate Anniversary Page
             if (bodyId === 'page-anniversary') {
                 document.getElementById('anniversary-title').textContent = data.anniversary.title;
                 const container = document.getElementById('anniversary-container');

@@ -9,9 +9,19 @@
       "title": "Explore the Archive",
       "galleryLabel": "Gallery",
       "poemsLabel": "Poems",
-      "anniversaryLabel": "Anni :)"
+      "anniversaryLabel": "Anniversary"
     }
   },
+  "birthday": {
+    "title": "happy birthday!",
+    "entries": [
+      {
+        "date": "May 25, 2026",
+        "text": "happy birthday my love"
+      }
+    ]
+  },
+
   "gallery": {
     "title": "Gallery of Our Memories",
     "items": [
@@ -70,6 +80,7 @@
       }
     ]
   },
+
   "anniversary": {
     "title": "happy anniversary!!",
     "entries": [
