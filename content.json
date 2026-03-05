@@ -29,7 +29,7 @@
     ]
   },
   "poems": {
-    "title": "Words For My Love",
+    "title": "for my love",
     "items": [
       {
         "id": "1",
@@ -45,7 +45,7 @@
       },
       {
         "id": "2",
-        "title": "All Yours",
+        "title": "all yours",
         "lines": [
           "I would tie your shoes,",
           "dry your hair if you're tired,",
@@ -57,7 +57,7 @@
       },
       {
         "id": "3",
-        "title": "Thoughts",
+        "title": "thoughts",
         "lines": [
           "you will always be you,",
           "and I will always be me.",
