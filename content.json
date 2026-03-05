@@ -8,7 +8,8 @@
     "cta": {
       "title": "Explore the Archive",
       "galleryLabel": "Gallery",
-      "poemsLabel": "Poems"
+      "poemsLabel": "Poems",
+      "anniversaryLabel": "Anni :)"
     }
   },
   "gallery": {
@@ -70,15 +71,11 @@
     ]
   },
   "anniversary": {
-    "title": "Our Anniversary",
+    "title": "happy anniversary!!",
     "entries": [
       {
-        "date": "August 14, 2024",
-        "text": "Today felt a little lighter. I spent the afternoon rearranging the room, letting the sun hit the far wall."
-      },
-      {
-        "date": "September 2, 2024",
-        "text": "Some memories fade, but the feeling of the rain this morning will stick around for a while."
+        "date": "June 1, 2026",
+        "text": "Thank you."
       }
     ]
   }
