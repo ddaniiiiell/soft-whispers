@@ -192,3 +192,28 @@ a {
     color: var(--hover-accent);
   }
 }
+
+/* =========================================
+   7. TYPOGRAPHY TWEAKS (Larger Text)
+   ========================================= */
+
+/* Bump up the Subtitles */
+#home-subtitle, 
+#gallery-subtitle {
+    font-size: 1.35rem !important; 
+}
+
+/* Bump up the Body Text (Poems, Birthday, Anniversary) */
+.poem-line, 
+.birthday-text, 
+.anniversary-text {
+    font-size: 1.2rem !important; 
+    line-height: 1.9 !important; /* Adds a little extra breathing room between lines */
+}
+
+/* Bump up the smaller details (Captions and Dates) */
+.gallery-caption,
+.birthday-date, 
+.anniversary-date {
+    font-size: 1.05rem !important;
+}
