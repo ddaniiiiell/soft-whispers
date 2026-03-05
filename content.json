@@ -1,16 +1,16 @@
 {
   "home": {
-    "title": "Soft Purple Archive",
+    "title": "soft purple archive",
     "subtitleLines": [
       "to my love and best friend.",
       "gonna be a long read but i hope you enjoy this gift!"
     ],
     "cta": {
-      "title": "Explore the Archive",
-      "birthdayLabel": "Birthday",
-      "galleryLabel": "Gallery",
-      "poemsLabel": "Poems",
-      "anniversaryLabel": "Anniversary"
+      "title": "enjoy love",
+      "birthdayLabel": "birthday",
+      "galleryLabel": "gallery",
+      "poemsLabel": "poems",
+      "anniversaryLabel": "anniversary"
     }
   },
 
@@ -25,7 +25,7 @@
   },
 
   "gallery": {
-    "title": "Our Memories",
+    "title": "our memories",
     "subtitle": "we've come so far even when we didn't know it",
     "items": [
       {
