@@ -68,5 +68,18 @@
         ]
       }
     ]
+  },
+  "anniversary": {
+    "title": "Our Anniversary",
+    "entries": [
+      {
+        "date": "August 14, 2024",
+        "text": "Today felt a little lighter. I spent the afternoon rearranging the room, letting the sun hit the far wall."
+      },
+      {
+        "date": "September 2, 2024",
+        "text": "Some memories fade, but the feeling of the rain this morning will stick around for a while."
+      }
+    ]
   }
 }
