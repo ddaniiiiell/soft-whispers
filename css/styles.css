@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
 /* =========================================
    1. DESIGN SYSTEM (CSS Variables)
    ========================================= */
 :root {
-  /* New "Light Pixel Purple" Palette */
-  --bg-home: #FBF8FD;       /* Very pale lavender-white */
-  --bg-subpages: #FDFBFE;   /* Even lighter, almost pure white-purple */
-  --text-primary: #6D5B7D;  /* Muted medium purple for main text */
-  --text-secondary: #9A8BADD; /* Soft lilac for subtitles/captions */
-  --stroke: #DED5E8;        /* Light purple for button borders & lines */
-  --hover-accent: #BFAFD4;  /* Slightly richer purple for hovers */
-  --focus-ring: rgba(191, 175, 212, 0.6); /* Soft purple focus glow */
+  /* New "Soft Monochrome Blue" Palette */
+  --bg-home: #F5F8FA;        /* Very pale, cool blue-white */
+  --bg-subpages: #F0F4F8;    /* Slightly deeper cool white for subpages */
   
-  /* Typography (Unchanged) */
-  --font-serif: "Playfair Display", "Georgia", serif;
+  /* Text Colors - Deep, muted blues instead of harsh black */
+  --text-primary: #2C3E50;   /* Deep slate blue for main headings/text */
+  --text-secondary: #5D6D7E; /* Softer blue-gray for subtitles/captions */
   
+  /* Accents & Borders */
+  --stroke: #B2BABB;         /* Soft gray-blue for button borders & lines */
+  --hover-accent: #85C1E9;   /* Brighter sky blue for hovers */
+  --focus-ring: rgba(133, 193, 233, 0.5); /* Soft blue focus glow */
+  
+  /* Typography */
+  --font-serif: "EB Garamond", "Georgia", serif;
+
   /* Motion Specs (Unchanged) */
   --transition-speed: 220ms;
   --transition-ease: ease-out;
