@@ -217,3 +217,15 @@ a {
 .anniversary-date {
     font-size: 1.05rem !important;
 }
+
+/* Bring the title and subtitle closer together */
+#home-title,
+#gallery-title {
+    margin-bottom: 8px !important; /* Adjust this number to make the gap tighter or looser */
+}
+
+/* Optional: Pull the subtitle up slightly just in case */
+#home-subtitle,
+#gallery-subtitle {
+    margin-top: 0 !important; 
+}
