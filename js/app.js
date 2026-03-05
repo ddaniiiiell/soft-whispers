@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault(); 
                     const passcode = prompt("Please enter the passcode to view the anniversary page:");
                     
+                    // PASSCODE HERE
                     if (passcode !== null && passcode.toLowerCase() === "lavender") {
                         window.location.href = "anniversary.html";
                     } else if (passcode !== null) {
