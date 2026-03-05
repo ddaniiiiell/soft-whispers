@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('btn-gallery').textContent = data.home.cta.galleryLabel;
                 document.getElementById('btn-poems').textContent = data.home.cta.poemsLabel;
                 
-
-                // Setup the locked Anniversary button
+                // locked Anniversary button
                 const btnAnniversary = document.getElementById('btn-anniversary');
                 btnAnniversary.textContent = data.home.cta.anniversaryLabel;
                 
