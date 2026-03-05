@@ -47,9 +47,38 @@
     "items": [
       {
         "id": "1",
-        "title": "this is def a poem",
+        "title": "love is to change",
         "lines": [
-          "blehhhhhhh"
+          "slowly but surely, I changed.",
+          "now, when someone asks me what love is,",
+          "i imagine your face.",
+          "the way you smile and laugh,",
+          "how you softly hold my face,",
+          "and how you look at me with joy."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "all yours",
+        "lines": [
+          "I would tie your shoes,",
+          "dry your hair if you're tired,",
+          "buy you snacks at midnight",
+          "peel oranges for you while we talk",
+          "answer your rage baiting questions",
+          "hug you tight every time I see you."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "thoughts",
+        "lines": [
+          "you will always be you,",
+          "and I will always be me.",
+          "forever separate and never the same.",
+          "but I hope you never forget,",
+          "that I am yours and you are mine.",
+          "and that I will always be here for you."
         ]
       }
     ]
