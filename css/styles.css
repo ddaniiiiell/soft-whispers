@@ -229,3 +229,38 @@ a {
 #gallery-subtitle {
     margin-top: 0 !important; 
 }
+
+/* =========================================
+   8. DUST MOTES (Home Page Only)
+   ========================================= */
+#dust-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Ensures the dust doesn't block you from clicking buttons */
+  z-index: 0; /* Keeps it in the background */
+  overflow: hidden;
+}
+
+.dust-mote {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.65); /* Soft, semi-transparent white */
+  border-radius: 50%;
+  filter: blur(2px); /* Gives it that out-of-focus, cinematic look */
+}
+
+/* The falling animation */
+@keyframes drift {
+  0% { transform: translateY(-10vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(105vh); opacity: 0; }
+}
+
+/* The gentle side-to-side sway */
+@keyframes sway {
+  0% { margin-left: -20px; }
+  100% { margin-left: 20px; }
+}

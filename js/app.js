@@ -31,6 +31,35 @@ document.addEventListener('DOMContentLoaded', () => {
                         alert("nuh uh not yet");
                     }
                 });
+
+                // --- NEW: Dust Motes Generator ---
+                const dustContainer = document.createElement('div');
+                dustContainer.id = 'dust-container';
+                document.body.appendChild(dustContainer);
+
+                // Create 35 floating particles
+                for (let i = 0; i < 35; i++) { 
+                    const mote = document.createElement('div');
+                    mote.className = 'dust-mote';
+                    
+                    // Randomize size (between 2px and 6px)
+                    const size = Math.random() * 4 + 2; 
+                    mote.style.width = `${size}px`;
+                    mote.style.height = `${size}px`;
+                    
+                    // Randomize starting position across the screen
+                    mote.style.left = `${Math.random() * 100}vw`;
+                    mote.style.top = `${Math.random() * -100}vh`; 
+                    
+                    // Randomize how fast they fall and sway
+                    const fallDuration = Math.random() * 15 + 12; // 12s to 27s
+                    const swayDuration = Math.random() * 4 + 3;   // 3s to 7s
+                    const delay = Math.random() * -25; // Starts them at different times so they don't fall in a single clump
+                    
+                    mote.style.animation = `drift ${fallDuration}s linear ${delay}s infinite, sway ${swayDuration}s ease-in-out infinite alternate`;
+                    
+                    dustContainer.appendChild(mote);
+                }
             }
 
             // 2. Populate Gallery Page (Lightbox Removed)
