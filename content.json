@@ -25,7 +25,8 @@
   },
 
   "gallery": {
-    "title": "Gallery of Our Memories",
+    "title": "Our Memories",
+    "subtitle": "click on the pics for a better view!",
     "items": [
       {
         "id": "1",
