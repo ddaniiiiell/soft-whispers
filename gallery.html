@@ -20,7 +20,6 @@
             background: #fff;
             box-shadow: 0 2px 12px rgba(109, 91, 125, 0.04);
             transition: transform var(--transition-speed) var(--transition-ease), border-color var(--transition-speed);
-            cursor: zoom-in; /* Adds a little magnifying glass cursor */
         }
         .gallery-item img:hover {
             transform: translateY(-2px);
@@ -53,12 +52,6 @@
         <p id="gallery-subtitle" style="text-align: center; margin-bottom: 60px; color: var(--text-secondary); font-size: 1.1rem; font-style: italic;"></p>
         <div id="gallery-grid" class="gallery-grid">
             </div>
-    </div>
-
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-close">&times;</div>
-        <img id="lightbox-img" class="lightbox-content" src="" alt="">
-        <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
     <script src="js/app.js"></script>

@@ -33,17 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // 2. Populate Gallery Page
+            // 2. Populate Gallery Page (Lightbox Removed)
             if (bodyId === 'page-gallery') {
                 document.getElementById('gallery-title').textContent = data.gallery.title;
-                
-                // NEW: Inject the subtitle
                 document.getElementById('gallery-subtitle').textContent = data.gallery.subtitle;
 
                 const grid = document.getElementById('gallery-grid');
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.getElementById('lightbox-img');
-                const lightboxCaption = document.getElementById('lightbox-caption');
 
                 data.gallery.items.forEach(item => {
                     const wrapper = document.createElement('div');
@@ -52,24 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${item.src}" alt="${item.alt}" loading="lazy">
                         <div class="gallery-caption">${item.caption}</div>
                     `;
-                    
-                    wrapper.querySelector('img').addEventListener('click', () => {
-                        lightboxImg.src = item.src;
-                        lightboxImg.alt = item.alt;
-                        lightboxCaption.textContent = item.caption;
-                        lightbox.classList.add('active');
-                    });
-
                     grid.appendChild(wrapper);
-                });
-
-                lightbox.addEventListener('click', (e) => {
-                    if (e.target !== lightboxImg) lightbox.classList.remove('active');
-                });
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                        lightbox.classList.remove('active');
-                    }
                 });
             }
 
