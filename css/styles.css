@@ -4,13 +4,15 @@
    1. DESIGN SYSTEM (CSS Variables)
    ========================================= */
 :root {
-  --bg-home: #F5F8FA;        
-  --bg-subpages: #F0F4F8;    
-  --text-primary: #2C3E50;   
-  --text-secondary: #5D6D7E; 
-  --stroke: #B2BABB;         
-  --hover-accent: #85C1E9;   
-  --focus-ring: rgba(133, 193, 233, 0.5); 
+  /* Soft Green & Cream Palette */
+  --bg-home: #EAE4D3;        /* Soft, sandy cream */
+  --bg-subpages: #F2EDE2;    /* A slightly lighter cream */
+  --text-primary: #2E5A35;   /* Deep forest green */
+  --text-secondary: #5F8D66; /* Muted, natural green */
+  --stroke: #BCC6B4;         /* Light, dusty green-beige border */
+  --hover-accent: #74C084;   /* A brighter, fresh green for accents */
+  --focus-ring: rgba(116, 192, 132, 0.5); 
+  
   --font-serif: "EB Garamond", "Georgia", serif;
   --transition-speed: 220ms;
   --transition-ease: ease-out;
@@ -61,10 +63,11 @@ a {
 
 .btn:hover {
   border-color: var(--hover-accent);
-  background-color: rgba(222, 213, 232, 0.2); 
+  /* A very light, transparent green for the hover background */
+  background-color: rgba(116, 192, 132, 0.1); 
   color: var(--text-primary); 
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(109, 91, 125, 0.05); 
+  box-shadow: 0 2px 8px rgba(46, 90, 53, 0.08); 
 }
 
 .btn:active {
@@ -113,7 +116,7 @@ a {
   font-size: 2.5rem;
   font-weight: normal;
   margin-bottom: 60px;
-} /* <-- THE MISSING BRACKET HAS BEEN ADDED HERE! */
+}
 
 /* =========================================
    7. TYPOGRAPHY TWEAKS (Larger Text)
@@ -162,7 +165,8 @@ a {
 
 .dust-mote {
   position: absolute;
-  background-color: rgba(133, 193, 233, 0.6); 
+  /* Changed to a soft, transparent green */
+  background-color: rgba(116, 192, 132, 0.5); 
   border-radius: 50%;
   filter: blur(2px); 
 }
@@ -238,14 +242,14 @@ a {
    ========================================= */
 .birthday-entry, 
 .anniversary-entry {
-    max-width: 650px;
+    max-width: 800px;
     margin: 0 auto 60px auto;
-    /* Changed from white to a very pale blue that is lighter than the main background */
-    background-color: #F8FCFF; 
-    border: 1px solid #E5EAEF;
+    /* A very pale cream paper color */
+    background-color: #F9F6F0; 
+    border: 1px solid var(--stroke);
     border-radius: 4px;
-    /* Slight adjustment to the shadow color to blend better with the new paper hex code */
-    box-shadow: 0 12px 40px rgba(133, 164, 189, 0.06); 
+    /* A soft, natural green shadow */
+    box-shadow: 0 12px 40px rgba(95, 141, 102, 0.08); 
     position: relative;
     padding: 50px 60px;
 }
