@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 2. Populate Gallery Page (Click to Reveal Polaroids)
             if (bodyId === 'page-gallery') {
                 document.getElementById('gallery-title').textContent = data.gallery.title;
-                document.getElementById('gallery-subtitle').textContent = data.gallery.subtitle;
+                document.getElementById('gallery-subtitle').innerHTML = data.gallery.subtitle;
 
                 const grid = document.getElementById('gallery-grid');
 
