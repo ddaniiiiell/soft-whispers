@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            // 2. Populate Gallery Page (Lightbox Removed)
+            // 2. Populate Gallery Page (Hidden Polaroids)
             if (bodyId === 'page-gallery') {
                 document.getElementById('gallery-title').textContent = data.gallery.title;
                 document.getElementById('gallery-subtitle').textContent = data.gallery.subtitle;
@@ -72,8 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 data.gallery.items.forEach(item => {
                     const wrapper = document.createElement('div');
                     wrapper.className = 'gallery-item';
+                    
+                    // Uses your new text, or defaults to "Hover to reveal" if you forget to add one!
+                    const coverText = item.coverText || "Hover to reveal";
+
                     wrapper.innerHTML = `
-                        <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                        <div class="gallery-photo-frame">
+                            <div class="gallery-overlay">
+                                <span class="overlay-text">${coverText}</span>
+                            </div>
+                            <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                        </div>
                         <div class="gallery-caption">${item.caption}</div>
                     `;
                     grid.appendChild(wrapper);
