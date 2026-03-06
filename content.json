@@ -26,7 +26,7 @@
 
   "gallery": {
     "title": "our memories",
-    "subtitle": "we've come so far even when we didn't know it",
+    "subtitle": "we've come so far even when we didn't know it<br>click to reveal!",
     "items": [
       {
         "id": "1",
