@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            // 2. Populate Gallery Page (Hidden Polaroids)
+            // 2. Populate Gallery Page (Click to Reveal Polaroids)
             if (bodyId === 'page-gallery') {
                 document.getElementById('gallery-title').textContent = data.gallery.title;
                 document.getElementById('gallery-subtitle').textContent = data.gallery.subtitle;
@@ -72,9 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data.gallery.items.forEach(item => {
                     const wrapper = document.createElement('div');
                     wrapper.className = 'gallery-item';
-                    
-                    // Uses your new text, or defaults to "Hover to reveal" if you forget to add one!
-                    const coverText = item.coverText || "Hover to reveal";
+                    const coverText = item.coverText || "Click to reveal";
 
                     wrapper.innerHTML = `
                         <div class="gallery-photo-frame">
@@ -85,6 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="gallery-caption">${item.caption}</div>
                     `;
+
+                    const frame = wrapper.querySelector('.gallery-photo-frame');
+                    const overlay = wrapper.querySelector('.gallery-overlay');
+
+                    frame.addEventListener('click', () => {
+                        overlay.classList.add('is-revealed');
+                    }, { once: true }); 
+
                     grid.appendChild(wrapper);
                 });
             }
