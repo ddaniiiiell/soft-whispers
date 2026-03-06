@@ -12,7 +12,6 @@
             gap: 40px 30px;
         }
         
-        /* The new frame that holds both the image and the overlay */
         .gallery-photo-frame {
             position: relative;
             display: block;
@@ -35,10 +34,9 @@
             display: block;
         }
         
-        /* The new soft blue overlay */
         .gallery-overlay {
             position: absolute;
-            top: 6px; left: 6px; right: 6px; bottom: 6px; /* Fits perfectly inside the white photo border */
+            top: 6px; left: 6px; right: 6px; bottom: 6px; 
             background-color: var(--bg-home); 
             display: flex;
             align-items: center;
@@ -50,15 +48,16 @@
             z-index: 2;
         }
         
-        /* Fade out the overlay on hover */
-        .gallery-photo-frame:hover .gallery-overlay {
+        /* THE FIX: Replaced the hover effect with the permanent 'is-revealed' class */
+        .gallery-overlay.is-revealed {
             opacity: 0;
+            pointer-events: none; 
         }
         
         .overlay-text {
             color: var(--text-primary);
             font-size: 1.3rem;
-            font-style: italic; /* Keeps the handwritten feel for the overlay only */
+            font-style: italic; 
         }
         
         .gallery-caption {
