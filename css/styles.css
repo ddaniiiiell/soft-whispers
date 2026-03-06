@@ -245,7 +245,7 @@ a {
     max-width: 800px;
     margin: 0 auto 60px auto;
     /* A very pale cream paper color */
-    background-color: #F9F6F0; 
+    background-color: #eeebe5; 
     border: 1px solid var(--stroke);
     border-radius: 4px;
     /* A soft, natural green shadow */
