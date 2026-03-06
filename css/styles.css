@@ -240,12 +240,14 @@ a {
 .anniversary-entry {
     max-width: 650px;
     margin: 0 auto 60px auto;
-    padding: 50px 60px;
-    background-color: #FFFFFF; /* Pure white paper to stand out against --bg-subpages */
-    border: 1px solid #E5EAEF; /* Very faint, soft edge */
-    border-radius: 4px; /* Slight softening of the sharp corners */
-    box-shadow: 0 12px 40px rgba(93, 109, 126, 0.08); /* The soft blue-gray drop shadow */
+    /* Changed from white to a very pale blue that is lighter than the main background */
+    background-color: #F8FCFF; 
+    border: 1px solid #E5EAEF;
+    border-radius: 4px;
+    /* Slight adjustment to the shadow color to blend better with the new paper hex code */
+    box-shadow: 0 12px 40px rgba(133, 164, 189, 0.06); 
     position: relative;
+    padding: 50px 60px;
 }
 
 .birthday-date, 
@@ -254,17 +256,16 @@ a {
     color: var(--text-secondary);
     margin-bottom: 30px;
     font-size: 0.95rem;
-    text-align: right; /* Pushes the date to the top right, like a physical letter */
+    text-align: right;
 }
 
 .birthday-text, 
 .anniversary-text {
     color: var(--text-primary);
-    line-height: 2; /* Relaxed spacing for long-form reading */
+    line-height: 2;
     font-size: 1.1rem;
 }
 
-/* Mobile adjustments so the paper doesn't overflow on small screens */
 @media (max-width: 768px) {
     .birthday-entry, 
     .anniversary-entry {
