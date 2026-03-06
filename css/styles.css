@@ -284,22 +284,23 @@ a {
 /* =========================================
    11. THEME SWITCHER
    ========================================= */
-/* The Alternate Blue Theme */
+/* The Alternate Blue Theme (Copen Blue & Cold Morning) */
 [data-theme="blue"] {
-  --bg-home: #F5F8FA;        
-  --bg-subpages: #F0F4F8;    
-  --text-primary: #3B5360;   
-  --text-secondary: #5D6D7E; 
-  --stroke: #c2d1d9;         
-  --hover-accent: #85C1E9;   
-  --focus-ring: rgba(133, 193, 233, 0.5);
+  --bg-home: #e6e5e4;        /* Cold Morning */
+  --bg-subpages: #efeeed;    /* A slightly lighter tint of Cold Morning */
+  --text-primary: #516b84;   /* Copen Blue */
+  --text-secondary: #71899f; /* A softened, muted Copen Blue */
+  --stroke: #cbd1d6;         /* A dusty gray-blue for borders */
+  --hover-accent: #6786a3;   /* A brighter Copen Blue for interactions */
+  --focus-ring: rgba(81, 107, 132, 0.5);
 }
 
 /* Adjust the paper color when in the blue theme */
 [data-theme="blue"] .birthday-entry, 
 [data-theme="blue"] .anniversary-entry {
-    background-color: #F8FCFF; 
-    box-shadow: 0 12px 40px rgba(133, 164, 189, 0.06); 
+    background-color: #f7f6f5; /* A crisp, slightly warm off-white */
+    border: 1px solid #cbd1d6;
+    box-shadow: 0 12px 40px rgba(81, 107, 132, 0.12); /* Soft Copen Blue shadow */
 }
 
 /* The Floating Button */
