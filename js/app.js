@@ -80,20 +80,96 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // 3. Populate Poems Page
+            // 3. Populate Poems Page (NEW: Accordion + Typewriter)
             if (bodyId === 'page-poems') {
                 document.getElementById('poems-title').textContent = data.poems.title;
                 const container = document.getElementById('poems-container');
+
                 data.poems.items.forEach(item => {
                     const block = document.createElement('div');
                     block.className = 'poem-block';
-                    let linesHtml = item.lines.map(line => `<span class="poem-line">${line}</span>`).join('');
-                    block.innerHTML = `
-                        <h2 class="poem-title">${item.title}</h2>
-                        <div class="poem-body">${linesHtml}</div>
+
+                    // Create the clickable header
+                    const toggle = document.createElement('div');
+                    toggle.className = 'poem-toggle';
+                    toggle.innerHTML = `
+                        <h2 class="poem-title" style="margin: 0; font-size: 1.4rem;">${item.title}</h2>
+                        <span class="poem-toggle-icon">+</span>
                     `;
+
+                    // Create the wrapper that hides/shows the text
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'poem-body-wrapper';
+
+                    // Create the actual text container
+                    const body = document.createElement('div');
+                    body.className = 'poem-body';
+
+                    wrapper.appendChild(body);
+                    block.appendChild(toggle);
+                    block.appendChild(wrapper);
                     container.appendChild(block);
+
+                    // THE MEMORY SWITCH
+                    let hasTyped = false; 
+
+                    toggle.addEventListener('click', () => {
+                        const isOpen = wrapper.classList.contains('open');
+                        const icon = toggle.querySelector('.poem-toggle-icon');
+
+                        if (isOpen) {
+                            // Close it
+                            wrapper.classList.remove('open');
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            // Open it
+                            wrapper.classList.add('open');
+                            icon.style.transform = 'rotate(45deg)'; // Rotates the + into an x!
+
+                            // Start typing ONLY if it hasn't typed before
+                            if (!hasTyped) {
+                                hasTyped = true;
+                                typeWriter(item.lines, body);
+                            }
+                        }
+                    });
                 });
+
+                // The Typewriter Engine
+                function typeWriter(linesArray, containerElement) {
+                    containerElement.innerHTML = ''; // Clear out any placeholder
+                    containerElement.classList.add('typing-cursor');
+
+                    let lineIndex = 0;
+                    let charIndex = 0;
+                    let currentLineElement = null;
+
+                    function typeNextChar() {
+                        if (charIndex === 0) {
+                            currentLineElement = document.createElement('div');
+                            currentLineElement.className = 'poem-line';
+                            containerElement.appendChild(currentLineElement);
+                        }
+
+                        const currentString = linesArray[lineIndex];
+
+                        if (charIndex < currentString.length) {
+                            currentLineElement.textContent += currentString.charAt(charIndex);
+                            charIndex++;
+                            setTimeout(typeNextChar, 40); // 40ms per letter (adjust to make it faster/slower)
+                        } else {
+                            lineIndex++;
+                            charIndex = 0;
+                            
+                            if (lineIndex < linesArray.length) {
+                                setTimeout(typeNextChar, 500); // 500ms pause between lines
+                            } else {
+                                containerElement.classList.remove('typing-cursor'); // Remove cursor when done
+                            }
+                        }
+                    }
+                    typeNextChar();
+                }
             }
             
             // 4. Populate Birthday Page

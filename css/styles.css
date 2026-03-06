@@ -265,3 +265,60 @@ a {
   0% { margin-left: -20px; }
   100% { margin-left: 20px; }
 }
+
+/* =========================================
+   9. POEM ACCORDIONS & TYPEWRITER
+   ========================================= */
+.poem-block {
+    border-bottom: 1px solid var(--stroke);
+    margin-bottom: 16px;
+}
+
+/* The Clickable Header */
+.poem-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 0;
+    color: var(--text-primary);
+    transition: color var(--transition-speed);
+}
+
+.poem-toggle:hover {
+    color: var(--hover-accent);
+}
+
+.poem-toggle-icon {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    transition: transform var(--transition-speed);
+}
+
+/* The Hidden Text Container */
+.poem-body-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s var(--transition-ease);
+}
+
+.poem-body-wrapper.open {
+    max-height: 800px; /* Gives it plenty of room to open smoothly */
+}
+
+.poem-body {
+    padding-bottom: 24px;
+    color: var(--text-secondary);
+}
+
+/* The Blinking Cursor */
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+    color: var(--text-secondary);
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
