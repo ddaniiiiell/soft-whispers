@@ -165,10 +165,14 @@ a {
 
 .dust-mote {
   position: absolute;
-  /* Changed to a soft, transparent green */
-  background-color: rgba(116, 192, 132, 0.5); 
-  border-radius: 50%;
-  filter: blur(2px); 
+  color: #FFFFFF; /* Crisp white snow */
+  opacity: 0.8;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4); /* Soft frosted glow */
+}
+
+/* This injects the snowflake shape directly into the HTML element */
+.dust-mote::after {
+  content: '❅'; 
 }
 
 @keyframes drift {
