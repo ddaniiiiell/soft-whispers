@@ -48,10 +48,10 @@
             z-index: 2;
         }
         
-        /* THE FIX: Replaced the hover effect with the permanent 'is-revealed' class */
+        /* SAFETY NET: I added !important to absolutely force it to turn invisible */
         .gallery-overlay.is-revealed {
-            opacity: 0;
-            pointer-events: none; 
+            opacity: 0 !important;
+            pointer-events: none !important; 
         }
         
         .overlay-text {
@@ -83,6 +83,6 @@
             </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=2"></script>
 </body>
 </html>
