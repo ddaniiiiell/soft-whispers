@@ -280,3 +280,50 @@ a {
         padding: 30px 20px;
     }
 }
+
+/* =========================================
+   11. THEME SWITCHER
+   ========================================= */
+/* The Alternate Blue Theme */
+[data-theme="blue"] {
+  --bg-home: #F5F8FA;        
+  --bg-subpages: #F0F4F8;    
+  --text-primary: #3B5360;   
+  --text-secondary: #5D6D7E; 
+  --stroke: #c2d1d9;         
+  --hover-accent: #85C1E9;   
+  --focus-ring: rgba(133, 193, 233, 0.5);
+}
+
+/* Adjust the paper color when in the blue theme */
+[data-theme="blue"] .birthday-entry, 
+[data-theme="blue"] .anniversary-entry {
+    background-color: #F8FCFF; 
+    box-shadow: 0 12px 40px rgba(133, 164, 189, 0.06); 
+}
+
+/* The Floating Button */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--stroke);
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed) var(--transition-ease);
+    z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+    border-color: var(--hover-accent);
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 0. Global Theme Logic ---
+    // Check if the user previously chose the blue theme
+    const savedTheme = localStorage.getItem('archive-theme');
+    if (savedTheme === 'blue') {
+        document.documentElement.setAttribute('data-theme', 'blue');
+    }
+
+    // Attach the click listener to the button (if we are on the home page)
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            
+            if (currentTheme === 'blue') {
+                // Switch back to green
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('archive-theme', 'green');
+            } else {
+                // Switch to blue
+                document.documentElement.setAttribute('data-theme', 'blue');
+                localStorage.setItem('archive-theme', 'blue');
+            }
+        });
+    }
+    
     fetch('content.json')
         .then(response => response.json())
         .then(data => {
