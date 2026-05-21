@@ -331,6 +331,9 @@ a {
 
 /* music player */
 .music-player {
-    max-width: 520px;
-    margin: 48px auto 0 auto;
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    width: min(360px, calc(100vw - 48px));
+    z-index: 1000;
 }
