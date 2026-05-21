@@ -19,7 +19,7 @@
     "entries": [
       {
         "date": "May 25, 2026",
-        "text": "\tHAPPY BIRTHDAY BABYYYYY can’t believe you’re 19 :) this website is actually meant to be a two part gift so don’t even think of trying to get into the anniversary page yet. i’m watching you. LOLLL i actually started working on this since i last visited you in january so i was surprised to say the least when you gifted me a website for valentines day (you totally stole my idea (i’m just kidding i loved that website so much))<br><br>but seriously, not only am i so proud of you but also so grateful that i get to watch you (and myself) evolve overtime."
+        "text": "\tHAPPY BIRTHDAY BABYYYYY can’t believe you’re 19 :) this website is actually meant to be a two part gift so don’t even think of trying to get into the anniversary page yet. i’m watching you. LOLLL i actually started working on this since i last visited you in january so i was surprised to say the least when you gifted me a website for valentines day (you totally stole my idea (i’m just kidding i loved that website so much))<br><br>but seriously, not only am i so proud of you but also that i get to call you mine. i'm so grateful that i got to live this past year with you and i'm excited to see how we keep growing."
       }
     ]
   },
@@ -59,10 +59,9 @@
       },
       {
         "id": "2",
-        "title": "love is to change",
+        "title": "my kind of love",
         "lines": [
-          "slowly but surely, I changed.",
-          "now, when someone asks me what love is,",
+          "when someone asks me what love is,",
           "i imagine your face.",
           "the way you smile and laugh,",
           "how you softly hold my face,",
@@ -71,28 +70,23 @@
       },
       {
         "id": "3",
-        "title": "all yours",
+        "title": "my fav",
         "lines": [
-          "I would tie your shoes,",
-          "dry your hair if you're tired,",
-          "buy you snacks at midnight,",
-          "peel oranges for you while we talk,",
-          "answer your rage baiting questions,",
-          "hug you tight every time I see you."
+          "***"
         ]
       },
       {
         "id": "4",
-        "title": "opia",
+        "title": "all yours",
         "lines": [
-          "\"the ambigious intensity of eye contact.\"",
-          "from the dictionary of obscure sorrows,",
-          "three years ago this was one of my favorite words.",
-          "sometimes when i look in your eyes,",
-          "i can't tell what you're feeling or thinking.",
-          "but what i do know is that your gaze is one of my favorites.",
-          "and i'll drive five hours just to look into your eyes,",
-          "talking about our days or even one centimeter apart in silence."
+          "i would tie your shoes,",
+          "dry your hair if you're tired,",
+          "buy you snacks at midnight,",
+          "peel oranges for you while we talk,",
+          "answer your rage baiting questions,",
+          "hug you tight every time I see you.",
+          "i would try anything for you,",
+          "because everything can be fun with you."
         ]
       },
       {
@@ -106,7 +100,21 @@
           "that i am yours and you are mine.",
           "and that i will always be here for you."
         ]
-      }
+      },
+      {
+        "id": "6",
+        "title": "opia",
+        "lines": [
+          "\"the ambigious intensity of eye contact.\"",
+          "from the dictionary of obscure sorrows,",
+          "three years ago this was one of my favorite words.",
+          "sometimes when i look in your eyes,",
+          "i can't tell what you're feeling or thinking.",
+          "but what i do know is that your gaze is one of my favorites.",
+          "and i'll drive five hours just to look into your eyes,",
+          "talking about our days or even one centimeter apart in silence."
+        ]
+      } 
     ]
   },
 
