@@ -28,97 +28,97 @@
     "items": [
       {
         "id": "1",
-        "src": "1fakedate.jpg",
+        "src": "images/1fakedate.jpg",
         "coverText": "August 24",
         "caption": "totally not a date"
       },
       {
         "id": "2",
-        "src": "2shutdown.jpg",
+        "src": "images/2shutdown.jpg",
         "coverText": "",
         "caption": "senior core"
       },
       {
         "id": "3",
-        "src": "3fair.jpg",
+        "src": "images/3fair.jpg",
         "coverText": "",
         "caption": "the fair!"
       },
       {
         "id": "4",
-        "src": "4cones.jpg",
+        "src": "images/4cones.jpg",
         "coverText": "",
         "caption": "our first cone date"
       },
       {
         "id": "5",
-        "src": "5starfish.jpg",
+        "src": "images/5starfish.jpg",
         "coverText": "",
         "caption": "my fav starfish"
       },
       {
         "id": "6",
-        "src": "6upclose.jpg",
+        "src": "images/6upclose.jpg",
         "coverText": "",
         "caption": "the best .5 couple"
       },
       {
         "id": "7",
-        "src": "7prom.JPG",
+        "src": "images/7prom.JPG",
         "coverText": "",
         "caption": "your smile is so cutie"
       },
       {
         "id": "8",
-        "src": "8promstare.JPEG",
+        "src": "images/8promstare.JPEG",
         "coverText": "",
         "caption": "myyy prom date"
       },
       {
         "id": "9",
-        "src": "9lanterns.JPG",
+        "src": "images/9lanterns.JPG",
         "coverText": "",
         "caption": "so pretty"
       },
       {
         "id": "10",
-        "src": "10playground.jpg",
+        "src": "images/10playground.jpg",
         "coverText": "",
         "caption": "just dilly dallying"
       },
       {
         "id": "11",
-        "src": "11mollytea.JPG",
+        "src": "images/11mollytea.JPG",
         "coverText": "",
         "caption": "molly teaaaa"
       },
       {
         "id": "12",
-        "src": "12cuties.jpg",
+        "src": "images/12cuties.jpg",
         "coverText": "",
         "caption": "my cutie's cutie"
       },
       {
         "id": "13",
-        "src": "13homestead.jpg",
+        "src": "images/13homestead.jpg",
         "coverText": "",
         "caption": "homestead mod!"
       },
       {
         "id": "14",
-        "src": "14mine.jpg",
+        "src": "images/14mine.jpg",
         "coverText": "",
         "caption": "mine."
       },
       {
         "id": "15",
-        "src": "15minecraft.JPG",
+        "src": "images/15minecraft.JPG",
         "coverText": "",
         "caption": "we beat it. (legit)"
       },
       {
         "id": "16",
-        "src": "16oneblock.jpg",
+        "src": "images/16oneblock.jpg",
         "coverText": "",
         "caption": "let's keep playing together <3"
       }
