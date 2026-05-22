@@ -1,26 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
-
-/* =========================================
-   1. DESIGN SYSTEM (CSS Variables)
-   ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
 :root {
-  /* Soft Green & Cream Palette */
-  --bg-home: #EAE4D3;        /* Soft, sandy cream */
-  --bg-subpages: #F2EDE2;    /* A slightly lighter cream */
-  --text-primary: #2E5A35;   /* Deep forest green */
-  --text-secondary: #5F8D66; /* Muted, natural green */
-  --stroke: #BCC6B4;         /* Light, dusty green-beige border */
-  --hover-accent: #74C084;   /* A brighter, fresh green for accents */
-  --focus-ring: rgba(116, 192, 132, 0.5); 
-  
+  --bg-home: #eae4d3;
+  --bg-subpages: #f2ede2;
+  --text-primary: #2e5a35;
+  --text-secondary: #5f8d66;
+  --stroke: #bcc6b4;
+  --hover-accent: #74c084;
+  --focus-ring: rgba(116, 192, 132, 0.5);
+
   --font-serif: "EB Garamond", "Georgia", serif;
   --transition-speed: 220ms;
   --transition-ease: ease-out;
 }
+[data-theme="blue"] {
+  --bg-home: #e6e5e4;
+  --bg-subpages: #efeeed;
+  --text-primary: #516b84;
+  --text-secondary: #71899f;
+  --stroke: #cbd1d6;
+  --hover-accent: #6786a3;
+  --focus-ring: rgba(81, 107, 132, 0.5);
+}
+[data-theme="blue"] .birthday-entry,
+[data-theme="blue"] .anniversary-entry {
+  background-color: #f7f6f5;
+  border: 1px solid #cbd1d6;
+  box-shadow: 0 12px 40px rgba(81, 107, 132, 0.12);
+}
 
-/* =========================================
-   2. GLOBAL RESETS & TYPOGRAPHY
-   ========================================= */
+[data-theme="purple"] {
+  --bg-home: #f1edf7;
+  --bg-subpages: #f8f5fb;
+  --text-primary: #7b5aa6;
+  --text-secondary: #a184c7;
+  --stroke: #d8cde8;
+  --hover-accent: #b795d6;
+  --focus-ring: rgba(161, 132, 199, 0.5);
+}
+
+[data-theme="purple"] .birthday-entry,
+[data-theme="purple"] .anniversary-entry {
+  background-color: #fbf8ff;
+  border: 1px solid #d8cde8;
+  box-shadow: 0 12px 40px rgba(123, 90, 166, 0.12);
+}
 * {
   margin: 0;
   padding: 0;
@@ -43,19 +66,15 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-/* =========================================
-   3. BUTTONS & MICRO-INTERACTIONS
-   ========================================= */
 .btn {
   display: inline-block;
-  padding: 12px 32px; 
-  border: 1px solid var(--stroke); 
+  padding: 12px 32px;
+  border: 1px solid var(--stroke);
   background: transparent;
   color: var(--text-primary);
   font-family: var(--font-serif);
   font-size: 1rem;
-  letter-spacing: 0.5px; 
+  letter-spacing: 0.5px;
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-speed) var(--transition-ease);
@@ -63,11 +82,10 @@ a {
 
 .btn:hover {
   border-color: var(--hover-accent);
-  /* A very light, transparent green for the hover background */
-  background-color: rgba(116, 192, 132, 0.1); 
-  color: var(--text-primary); 
+  background-color: rgba(116, 192, 132, 0.1);
+  color: var(--text-primary);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(46, 90, 53, 0.08); 
+  box-shadow: 0 2px 8px rgba(46, 90, 53, 0.08);
 }
 
 .btn:active {
@@ -80,13 +98,16 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn { transition: color var(--transition-speed), border-color var(--transition-speed); }
-  .btn:hover, .btn:active { transform: none; }
+  .btn {
+    transition:
+      color var(--transition-speed),
+      border-color var(--transition-speed);
+  }
+  .btn:hover,
+  .btn:active {
+    transform: none;
+  }
 }
-
-/* =========================================
-   4. NAVIGATION (Subpages)
-   ========================================= */
 .nav-back {
   display: inline-block;
   margin: 40px;
@@ -101,10 +122,6 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
-
-/* =========================================
-   5. UTILITY CLASSES (Layout)
-   ========================================= */
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -117,223 +134,193 @@ a {
   font-weight: normal;
   margin-bottom: 60px;
 }
-
-/* =========================================
-   7. TYPOGRAPHY TWEAKS (Larger Text)
-   ========================================= */
-#home-subtitle, 
+#home-subtitle,
 #gallery-subtitle {
-    font-size: 1.35rem !important; 
+  font-size: 1.35rem !important;
 }
 
-.poem-line, 
-.birthday-text, 
+.poem-line,
+.birthday-text,
 .anniversary-text {
-    font-size: 1.2rem !important; 
-    line-height: 1.9 !important; 
+  font-size: 1.2rem !important;
+  line-height: 1.9 !important;
 }
 
 .gallery-caption,
-.birthday-date, 
+.birthday-date,
 .anniversary-date {
-    font-size: 1.05rem !important;
+  font-size: 1.05rem !important;
 }
 
 #home-title,
 #gallery-title {
-    margin-bottom: 8px !important; 
+  margin-bottom: 8px !important;
 }
 
 #home-subtitle,
 #gallery-subtitle {
-    margin-top: 0 !important; 
+  margin-top: 0 !important;
 }
-
-/* =========================================
-   8. DUST MOTES (Home Page Only)
-   ========================================= */
 #dust-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; 
-  z-index: 9999; 
+  pointer-events: none;
+  z-index: 9999;
   overflow: hidden;
 }
 
 .dust-mote {
   position: absolute;
-  color: #FFFFFF; /* Crisp white snow */
+  color: #ffffff;
   opacity: 0.8;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4); /* Soft frosted glow */
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
-
-/* This injects the snowflake shape directly into the HTML element */
 .dust-mote::after {
-  content: '❅'; 
+  content: "❅";
 }
 
 @keyframes drift {
-  0% { transform: translateY(-10vh); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 0.8; }
-  100% { transform: translateY(105vh); opacity: 0; }
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(105vh);
+    opacity: 0;
+  }
 }
 
 @keyframes sway {
-  0% { margin-left: -20px; }
-  100% { margin-left: 20px; }
+  0% {
+    margin-left: -20px;
+  }
+  100% {
+    margin-left: 20px;
+  }
 }
-
-/* =========================================
-   9. POEM ACCORDIONS & TYPEWRITER
-   ========================================= */
 .poem-block {
-    border-bottom: 1px solid var(--stroke);
-    margin-bottom: 16px;
+  border-bottom: 1px solid var(--stroke);
+  margin-bottom: 16px;
 }
 
 .poem-toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 16px 0;
-    color: var(--text-primary);
-    transition: color var(--transition-speed);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 0;
+  color: var(--text-primary);
+  transition: color var(--transition-speed);
 }
 
 .poem-toggle:hover {
-    color: var(--hover-accent);
+  color: var(--hover-accent);
 }
 
 .poem-toggle-icon {
-    font-size: 1.5rem;
-    color: var(--text-secondary);
-    transition: transform var(--transition-speed);
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: transform var(--transition-speed);
 }
 
 .poem-body-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s var(--transition-ease);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s var(--transition-ease);
 }
 
 .poem-body-wrapper.open {
-    max-height: 800px; 
+  max-height: 800px;
 }
 
 .poem-body {
-    padding-bottom: 24px;
-    color: var(--text-secondary);
+  padding-bottom: 24px;
+  color: var(--text-secondary);
 }
 
 .typing-cursor::after {
-    content: '|';
-    animation: blink 1s step-start infinite;
-    color: var(--text-secondary);
-    margin-left: 2px;
+  content: "|";
+  animation: blink 1s step-start infinite;
+  color: var(--text-secondary);
+  margin-left: 2px;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
-
-/* =========================================
-   10. LETTERS (Birthday & Anniversary)
-   ========================================= */
-.birthday-entry, 
+.birthday-entry,
 .anniversary-entry {
-    max-width: 800px;
-    margin: 0 auto 60px auto;
-    /* A very pale cream paper color */
-    background-color: #eeebe5; 
-    border: 1px solid var(--stroke);
-    border-radius: 4px;
-    /* A soft, natural green shadow */
-    box-shadow: 0 12px 40px rgba(95, 141, 102, 0.08); 
-    position: relative;
-    padding: 50px 60px;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  background-color: #eeebe5;
+  border: 1px solid var(--stroke);
+  border-radius: 4px;
+  box-shadow: 0 12px 40px rgba(95, 141, 102, 0.08);
+  position: relative;
+  padding: 50px 60px;
 }
 
-.birthday-date, 
+.birthday-date,
 .anniversary-date {
-    font-style: italic;
-    color: var(--text-secondary);
-    margin-bottom: 30px;
-    font-size: 0.95rem;
-    text-align: right;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  text-align: right;
 }
 
-.birthday-text, 
+.birthday-text,
 .anniversary-text {
-    color: var(--text-primary);
-    line-height: 2;
-    font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 2;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
-    .birthday-entry, 
-    .anniversary-entry {
-        padding: 30px 20px;
-    }
+  .birthday-entry,
+  .anniversary-entry {
+    padding: 30px 20px;
+  }
 }
-
-/* =========================================
-   11. THEME SWITCHER
-   ========================================= */
-/* The Alternate Blue Theme (Copen Blue & Cold Morning) */
-[data-theme="blue"] {
-  --bg-home: #e6e5e4;        /* Cold Morning */
-  --bg-subpages: #efeeed;    /* A slightly lighter tint of Cold Morning */
-  --text-primary: #516b84;   /* Copen Blue */
-  --text-secondary: #71899f; /* A softened, muted Copen Blue */
-  --stroke: #cbd1d6;         /* A dusty gray-blue for borders */
-  --hover-accent: #6786a3;   /* A brighter Copen Blue for interactions */
-  --focus-ring: rgba(81, 107, 132, 0.5);
-}
-
-/* Adjust the paper color when in the blue theme */
-[data-theme="blue"] .birthday-entry, 
-[data-theme="blue"] .anniversary-entry {
-    background-color: #f7f6f5; /* A crisp, slightly warm off-white */
-    border: 1px solid #cbd1d6;
-    box-shadow: 0 12px 40px rgba(81, 107, 132, 0.12); /* Soft Copen Blue shadow */
-}
-
-/* The Floating Button */
 .theme-toggle-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid var(--stroke);
-    color: var(--text-primary);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-speed) var(--transition-ease);
-    z-index: 1000;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--stroke);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed) var(--transition-ease);
+  z-index: 1000;
 }
 
 .theme-toggle-btn:hover {
-    border-color: var(--hover-accent);
-    transform: translateY(-2px);
-    background-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--hover-accent);
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.3);
 }
-
-/* music player */
 .music-player {
-    position: fixed;
-    left: 24px;
-    bottom: 24px;
-    width: min(360px, calc(100vw - 48px));
-    z-index: 1000;
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  width: min(360px, calc(100vw - 48px));
+  z-index: 1000;
 }
