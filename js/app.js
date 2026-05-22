@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="gallery-overlay">
                                 <span class="overlay-text">${coverText}</span>
                             </div>
-                            <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                            <img src="${item.src}" loading="lazy">
                         </div>
                         <div class="gallery-caption">${item.caption}</div>
                     `;

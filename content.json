@@ -13,7 +13,6 @@
       "anniversaryLabel": "anniversary"
     }
   },
-
   "birthday": {
     "title": "happy birthday!!",
     "entries": [
@@ -23,23 +22,105 @@
       }
     ]
   },
-
   "gallery": {
     "title": "our memories",
     "subtitle": "we've come so far even when we didn't know it<br>click to reveal!",
     "items": [
       {
         "id": "1",
-        "src": "images/test.jpg",
-        "alt": "A soft purple sunset over a calm ocean",
+        "src": "1fakedate.jpg",
         "coverText": "August 24",
-        "caption": "Fading light, August 2024."
+        "caption": "totally not a date"
       },
       {
         "id": "2",
-        "src": "images/placeholder-2.jpg",
-        "alt": "A quiet room with lavender walls",
-        "caption": "The quiet room."
+        "src": "2shutdown.jpg",
+        "coverText": "",
+        "caption": "senior core"
+      },
+      {
+        "id": "3",
+        "src": "3fair.jpg",
+        "coverText": "",
+        "caption": "the fair!"
+      },
+      {
+        "id": "4",
+        "src": "4cones.jpg",
+        "coverText": "",
+        "caption": "our first cone date"
+      },
+      {
+        "id": "5",
+        "src": "5starfish.jpg",
+        "coverText": "",
+        "caption": "my fav starfish"
+      },
+      {
+        "id": "6",
+        "src": "6upclose.jpg",
+        "coverText": "",
+        "caption": "the best .5 couple"
+      },
+      {
+        "id": "7",
+        "src": "7prom.JPG",
+        "coverText": "",
+        "caption": "your smile is so cutie"
+      },
+      {
+        "id": "8",
+        "src": "8promstare.JPEG",
+        "coverText": "",
+        "caption": "myyy prom date"
+      },
+      {
+        "id": "9",
+        "src": "9lanterns.JPG",
+        "coverText": "",
+        "caption": "so pretty"
+      },
+      {
+        "id": "10",
+        "src": "10playground.jpg",
+        "coverText": "",
+        "caption": "just dilly dallying"
+      },
+      {
+        "id": "11",
+        "src": "11mollytea.JPG",
+        "coverText": "",
+        "caption": "molly teaaaa"
+      },
+      {
+        "id": "12",
+        "src": "12cuties.jpg",
+        "coverText": "",
+        "caption": "my cutie's cutie"
+      },
+      {
+        "id": "13",
+        "src": "13homestead.jpg",
+        "coverText": "",
+        "caption": "homestead mod!"
+      },
+      {
+        "id": "14",
+        "src": "14mine.jpg",
+        "coverText": "",
+        "caption": "mine."
+      },
+      {
+        "id": "15",
+        "src": "15minecraft.JPG",
+        "coverText": "",
+        "caption": "we beat it. (legit)"
+      },
+      {
+        "id": "16",
+        "src": "16oneblock.jpg",
+        "coverText": "",
+        "caption": "let's keep playing together <3"
       }
     ]
   },
@@ -124,7 +205,6 @@
       }
     ]
   },
-
   "anniversary": {
     "title": "happy anniversary!!",
     "entries": [
