@@ -29,7 +29,7 @@
       {
         "id": "1",
         "src": "images/1fakedate.jpg",
-        "coverText": "August 24",
+        "coverText": "",
         "caption": "totally not a date"
       },
       {
@@ -99,13 +99,13 @@
         "caption": "my cutie's cutie"
       },
       {
-        "id": "13",
+        "id": "14",
         "src": "images/13homestead.jpg",
         "coverText": "",
         "caption": "homestead mod!"
       },
       {
-        "id": "14",
+        "id": "13",
         "src": "images/14mine.jpg",
         "coverText": "",
         "caption": "mine."
