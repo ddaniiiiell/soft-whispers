@@ -47,13 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
         btnAnniversary.textContent = data.home.cta.anniversaryLabel;
         btnAnniversary.addEventListener("click", (e) => {
           e.preventDefault();
-          const passcode = prompt("enter the passcode!");
-          if (passcode !== null && passcode.toLowerCase() === "lavender") {
+          /*------
+          passcode
+          ------*/
+          const passcode = prompt("not yet baby");
+          if (passcode !== null && passcode.toLowerCase() === "cocoanut") {
             window.location.href = "anniversary.html";
           } else if (passcode !== null) {
             alert("nuh uh not yet");
           }
         });
+
         const dustContainer = document.createElement("div");
         dustContainer.id = "dust-container";
         document.body.appendChild(dustContainer);
