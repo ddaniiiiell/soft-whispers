@@ -278,6 +278,7 @@ a {
 .birthday-date,
 .anniversary-date {
   font-style: italic;
+
   color: var(--text-secondary);
   margin-bottom: 30px;
   font-size: 0.95rem;
