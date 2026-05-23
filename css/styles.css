@@ -324,3 +324,21 @@ a {
   width: min(360px, calc(100vw - 48px));
   z-index: 1000;
 }
+
+.song-description {
+  margin: 0 0 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.72);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.music-player iframe {
+  display: block;
+  border-radius: 12px;
+}
