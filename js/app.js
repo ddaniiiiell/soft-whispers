@@ -157,8 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         function typeWriter(linesArray, containerElement) {
           containerElement.innerHTML = ""; // Clear out any placeholder
-          containerElement.classList.add("typing-cursor");
-
+  
           let lineIndex = 0;
           let charIndex = 0;
           let currentLineElement = null;
@@ -167,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (charIndex === 0) {
               currentLineElement = document.createElement("div");
               currentLineElement.className = "poem-line";
+        currentLineElement.classList.add("typing-cursor");
               containerElement.appendChild(currentLineElement);
             }
 
@@ -182,9 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
               if (lineIndex < linesArray.length) {
                 setTimeout(typeNextChar, 500); // 500ms pause between lines
-              } else {
-                containerElement.classList.remove("typing-cursor"); // Remove cursor when done
-              }
+      }
             }
           }
           typeNextChar();
