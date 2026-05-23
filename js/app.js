@@ -162,8 +162,15 @@ document.addEventListener("DOMContentLoaded", () => {
           let charIndex = 0;
           let currentLineElement = null;
 
+    function clearTypingCursors() {
+      containerElement.querySelectorAll(".typing-cursor").forEach((line) => {
+        line.classList.remove("typing-cursor");
+      });
+    }
+
           function typeNextChar() {
             if (charIndex === 0) {
+        clearTypingCursors();
               currentLineElement = document.createElement("div");
               currentLineElement.className = "poem-line";
         currentLineElement.classList.add("typing-cursor");
