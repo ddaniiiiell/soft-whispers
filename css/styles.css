@@ -6,6 +6,8 @@
   --text-secondary: #5f8d66;
   --stroke: #bcc6b4;
   --hover-accent: #74c084;
+  --hover-surface: rgba(116, 192, 132, 0.1);
+  --hover-shadow: rgba(46, 90, 53, 0.08);
   --focus-ring: rgba(116, 192, 132, 0.5);
 
   --font-serif: "EB Garamond", "Georgia", serif;
@@ -35,6 +37,8 @@
   --text-secondary: #a184c7;
   --stroke: #d8cde8;
   --hover-accent: #b795d6;
+  --hover-surface: rgba(183, 149, 214, 0.14);
+  --hover-shadow: rgba(123, 90, 166, 0.12);
   --focus-ring: rgba(161, 132, 199, 0.5);
 }
 
@@ -82,10 +86,10 @@ a {
 
 .btn:hover {
   border-color: var(--hover-accent);
-  background-color: rgba(116, 192, 132, 0.1);
+  background-color: var(--hover-surface);
   color: var(--text-primary);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(46, 90, 53, 0.08);
+  box-shadow: 0 2px 8px var(--hover-shadow);
 }
 
 .btn:active {
@@ -315,7 +319,7 @@ a {
 .theme-toggle-btn:hover {
   border-color: var(--hover-accent);
   transform: translateY(-2px);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--hover-surface);
 }
 .music-player {
   position: fixed;
