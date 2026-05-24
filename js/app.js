@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
           /*------
           passcode
           ------*/
-          const passcode = prompt("not yet baby");
+          const passcode = prompt("it's time already?");
           if (passcode !== null && passcode.toLowerCase() === "cocoanut") {
             window.location.href = "anniversary.html";
           } else if (passcode !== null) {
