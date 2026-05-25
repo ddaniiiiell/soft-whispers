@@ -187,9 +187,13 @@ document.addEventListener("DOMContentLoaded", () => {
               lineIndex++;
               charIndex = 0;
 
-              if (lineIndex < linesArray.length) {
-                setTimeout(typeNextChar, 500); // 500ms pause between lines
-      }
+    if (lineIndex < linesArray.length) {
+      setTimeout(typeNextChar, 500); // 500ms pause between lines
+    }
+
+    if (lineIndex >= linesArray.length) {
+      clearTypingCursors();
+    }
             }
           }
           typeNextChar();
