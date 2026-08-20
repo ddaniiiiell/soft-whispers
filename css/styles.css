@@ -24,7 +24,8 @@
   --focus-ring: rgba(81, 107, 132, 0.5);
 }
 [data-theme="blue"] .birthday-entry,
-[data-theme="blue"] .anniversary-entry {
+[data-theme="blue"] .anniversary-entry,
+[data-theme="blue"] .in-proximum-entry {
   background-color: #f7f6f5;
   border: 1px solid #cbd1d6;
   box-shadow: 0 12px 40px rgba(81, 107, 132, 0.12);
@@ -43,7 +44,8 @@
 }
 
 [data-theme="purple"] .birthday-entry,
-[data-theme="purple"] .anniversary-entry {
+[data-theme="purple"] .anniversary-entry,
+[data-theme="purple"] .in-proximum-entry {
   background-color: #fbf8ff;
   border: 1px solid #d8cde8;
   box-shadow: 0 12px 40px rgba(123, 90, 166, 0.12);
@@ -375,7 +377,8 @@ a {
   }
 }
 .birthday-entry,
-.anniversary-entry {
+.anniversary-entry,
+.in-proximum-entry {
   max-width: 800px;
   margin: 0 auto 60px auto;
   background-color: #eeebe5;
@@ -397,8 +400,16 @@ a {
 }
 
 .birthday-text,
-.anniversary-text {
+.anniversary-text,
+.in-proximum-text {
   color: var(--text-primary);
+}
+
+.in-proximum-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }
 
 .birthday-text p,
@@ -421,7 +432,8 @@ a {
 
 @media (max-width: 768px) {
   .birthday-entry,
-  .anniversary-entry {
+  .anniversary-entry,
+  .in-proximum-entry {
     padding: 30px 20px;
   }
 }

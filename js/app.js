@@ -100,6 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
           data.home.cta.poemsLabel;
         document.getElementById("btn-birthday").textContent =
           data.home.cta.birthdayLabel;
+        document.getElementById("btn-in-proximum").textContent =
+          data.home.cta.inProximumLabel;
 
         const btnAnniversary = document.getElementById("btn-anniversary");
         btnAnniversary.textContent = data.home.cta.anniversaryLabel;
@@ -268,6 +270,22 @@ document.addEventListener("DOMContentLoaded", () => {
           data.anniversary.title;
         const container = document.getElementById("anniversary-container");
         renderLetterEntries(data.anniversary.entries, container, "anniversary");
+      }
+      if (bodyId === "page-in-proximum") {
+        document.getElementById("in-proximum-title").textContent =
+          data.inProximum.title;
+        const letter = document.getElementById("in-proximum-letter");
+
+        return fetch("in-proximum-letter.txt")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Unable to load the In Proximum letter.");
+            }
+            return response.text();
+          })
+          .then((letterText) => {
+            letter.textContent = letterText.trim();
+          });
       }
     })
     .catch((error) => console.error("Error loading content:", error));

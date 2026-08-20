@@ -10,8 +10,12 @@
       "birthdayLabel": "birthday",
       "galleryLabel": "gallery",
       "poemsLabel": "poems",
-      "anniversaryLabel": "anniversary"
+      "anniversaryLabel": "anniversary",
+      "inProximumLabel": "in proximum"
     }
+  },
+  "inProximum": {
+    "title": "in proximum"
   },
   "birthday": {
     "title": "happy birthday!!",
@@ -284,6 +288,14 @@
         "title": "Greed by Jiwoo",
         "lines": [
           "one of the first songs that reminded me of you. i felt greedy for how much i wanted you but couldn’t bring myself to tell you about it just to keep the illusion of peace in both of our individual lives. but now we’re intertwined and i couldn’t be happier."
+        ]
+      },
+      {
+        "id": "15",
+        "title": "summer, night by Jeon Jin Hee (feat. wave to earth)",
+        "lines": [
+          "“너와 함께 걷는 지금이 영원인 거야”",
+          "every time i see you again, we seem to have grown even more. “on this summer night, no matter where we are. walking with you is eternity.” i’ll be looking forward to every summer, every break, every moment i get to see you again. i love you pretty girl"
         ]
       }
     ]
