@@ -1,23 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("archive-theme");
-  if (savedTheme === "blue" || savedTheme === "purple") {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  }
+  const themes = ["green", "blue", "purple"];
   const themeBtn = document.getElementById("theme-toggle");
+  const savedTheme = localStorage.getItem("archive-theme");
+  const initialTheme = themes.includes(savedTheme) ? savedTheme : "green";
+
+  function applyTheme(theme, savePreference = true) {
+    if (theme === "green") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+
+    if (savePreference) {
+      localStorage.setItem("archive-theme", theme);
+    }
+
+    if (themeBtn) {
+      const nextTheme = themes[(themes.indexOf(theme) + 1) % themes.length];
+      themeBtn.dataset.currentTheme = theme;
+      themeBtn.setAttribute(
+        "aria-label",
+        `Current theme: ${theme}. Change to ${nextTheme}.`,
+      );
+      themeBtn.title = `Current theme: ${theme}. Change to ${nextTheme}.`;
+    }
+  }
+
+  applyTheme(initialTheme, false);
+
   if (themeBtn) {
     themeBtn.addEventListener("click", () => {
-      const currentTheme = localStorage.getItem("archive-theme") || "green";
-
-      if (currentTheme === "green") {
-        document.documentElement.setAttribute("data-theme", "blue");
-        localStorage.setItem("archive-theme", "blue");
-      } else if (currentTheme === "blue") {
-        document.documentElement.setAttribute("data-theme", "purple");
-        localStorage.setItem("archive-theme", "purple");
-      } else {
-        document.documentElement.removeAttribute("data-theme");
-        localStorage.setItem("archive-theme", "green");
-      }
+      const currentTheme = themeBtn.dataset.currentTheme || "green";
+      const nextTheme =
+        themes[(themes.indexOf(currentTheme) + 1) % themes.length];
+      applyTheme(nextTheme);
     });
   }
 
@@ -25,6 +41,48 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.json())
     .then((data) => {
       const bodyId = document.body.id;
+
+      function renderLetterEntries(entries, container, entryType) {
+        entries.forEach((entry) => {
+          const block = document.createElement("article");
+          block.className = `${entryType}-entry`;
+
+          const date = document.createElement("div");
+          date.className = `${entryType}-date`;
+          date.textContent = entry.date;
+          block.appendChild(date);
+
+          const letter = document.createElement("div");
+          letter.className = `${entryType}-text`;
+
+          if (entry.greeting) {
+            const greeting = document.createElement("p");
+            greeting.textContent = entry.greeting;
+            letter.appendChild(greeting);
+          }
+
+          entry.paragraphs.forEach((paragraphText) => {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = paragraphText;
+            letter.appendChild(paragraph);
+          });
+
+          if (entry.signoff?.length) {
+            const signoff = document.createElement("div");
+            signoff.className = "letter-signoff";
+            entry.signoff.forEach((lineText) => {
+              const line = document.createElement("span");
+              line.textContent = lineText;
+              signoff.appendChild(line);
+            });
+            letter.appendChild(signoff);
+          }
+
+          block.appendChild(letter);
+          container.appendChild(block);
+        });
+      }
+
       if (bodyId === "page-home") {
         document.getElementById("home-title").textContent = data.home.title;
 
@@ -124,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const toggle = document.createElement("div");
           toggle.className = "poem-toggle";
           toggle.innerHTML = `
-                        <h2 class="poem-title" style="margin: 0; font-size: 1.4rem;">${item.title}</h2>
+                        <h2 class="poem-title">${item.title}</h2>
                         <span class="poem-toggle-icon">+</span>
                     `;
           const wrapper = document.createElement("div");
@@ -203,29 +261,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("birthday-title").textContent =
           data.birthday.title;
         const container = document.getElementById("birthday-container");
-        data.birthday.entries.forEach((entry) => {
-          const block = document.createElement("div");
-          block.className = "birthday-entry";
-          block.innerHTML = `
-                        <div class="birthday-date">${entry.date}</div>
-                        <div class="birthday-text">${entry.text}</div>
-                    `;
-          container.appendChild(block);
-        });
+        renderLetterEntries(data.birthday.entries, container, "birthday");
       }
       if (bodyId === "page-anniversary") {
         document.getElementById("anniversary-title").textContent =
           data.anniversary.title;
         const container = document.getElementById("anniversary-container");
-        data.anniversary.entries.forEach((entry) => {
-          const block = document.createElement("div");
-          block.className = "anniversary-entry";
-          block.innerHTML = `
-                        <div class="anniversary-date">${entry.date}</div>
-                        <div class="anniversary-text">${entry.text}</div>
-                    `;
-          container.appendChild(block);
-        });
+        renderLetterEntries(data.anniversary.entries, container, "anniversary");
       }
     })
     .catch((error) => console.error("Error loading content:", error));

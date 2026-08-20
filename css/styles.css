@@ -129,7 +129,7 @@ a {
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 80px 20px;
+  padding: 0 20px 144px;
 }
 
 .page-title {
@@ -138,32 +138,66 @@ a {
   font-weight: normal;
   margin-bottom: 60px;
 }
-#home-subtitle,
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: 96px;
+  text-align: center;
+}
+
+#home-title {
+  margin-bottom: 8px;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: normal;
+}
+
+#home-subtitle {
+  margin: 0 0 48px;
+  color: var(--text-secondary);
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+#cta-title {
+  margin: 40px 0 20px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.home-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+#gallery-title {
+  margin-bottom: 12px;
+}
+
 #gallery-subtitle {
-  font-size: 1.35rem !important;
+  margin: 0 0 60px;
+  color: var(--text-secondary);
+  font-size: 1.35rem;
+  text-align: center;
 }
 
 .poem-line,
 .birthday-text,
 .anniversary-text {
-  font-size: 1.2rem !important;
-  line-height: 1.9 !important;
+  font-size: 1.2rem;
+  line-height: 1.9;
 }
 
 .gallery-caption,
 .birthday-date,
 .anniversary-date {
-  font-size: 1.05rem !important;
-}
-
-#home-title,
-#gallery-title {
-  margin-bottom: 8px !important;
-}
-
-#home-subtitle,
-#gallery-subtitle {
-  margin-top: 0 !important;
+  font-size: 1.05rem;
 }
 #dust-container {
   position: fixed;
@@ -211,9 +245,80 @@ a {
     margin-left: 20px;
   }
 }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+}
+
+.gallery-photo-frame {
+  position: relative;
+  display: block;
+  padding: 6px;
+  border: 1px solid var(--stroke);
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.04);
+  cursor: pointer;
+  transition:
+    transform var(--transition-speed) var(--transition-ease),
+    border-color var(--transition-speed);
+}
+
+.gallery-photo-frame:hover {
+  border-color: var(--hover-accent);
+  transform: translateY(-2px);
+}
+
+.gallery-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-overlay {
+  position: absolute;
+  z-index: 2;
+  inset: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--bg-home);
+  opacity: 1;
+  text-align: center;
+  transition: opacity 0.5s var(--transition-ease);
+}
+
+.gallery-overlay.is-revealed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay-text {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.gallery-caption {
+  margin-top: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
 .poem-block {
+  max-width: 600px;
+  margin: 0 auto 100px;
+  padding-left: 32px;
+  border-left: 1px solid var(--stroke);
   border-bottom: 1px solid var(--stroke);
-  margin-bottom: 16px;
+}
+
+.poem-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.4rem;
 }
 
 .poem-toggle {
@@ -249,6 +354,12 @@ a {
 .poem-body {
   padding-bottom: 24px;
   color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.poem-line {
+  display: block;
 }
 
 .typing-cursor::after {
@@ -288,8 +399,24 @@ a {
 .birthday-text,
 .anniversary-text {
   color: var(--text-primary);
-  line-height: 2;
-  font-size: 1.1rem;
+}
+
+.birthday-text p,
+.anniversary-text p {
+  margin-bottom: 1.5em;
+}
+
+.birthday-text p:last-of-type,
+.anniversary-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.letter-signoff {
+  margin-top: 1.5em;
+}
+
+.letter-signoff span {
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -333,5 +460,70 @@ a {
 
 .music-player iframe {
   display: block;
+  width: 100%;
+  border: 0;
   border-radius: 12px;
+}
+
+@media (min-width: 901px) {
+  .gallery-item:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-back {
+    margin: 24px 20px;
+  }
+
+  .page-container {
+    padding-right: 16px;
+    padding-bottom: 136px;
+    padding-left: 16px;
+  }
+
+  .home-container {
+    padding-top: 80px;
+  }
+
+  .home-nav {
+    gap: 12px;
+  }
+
+  .home-nav .btn {
+    flex: 1 1 130px;
+    max-width: 220px;
+  }
+
+  .music-player {
+    right: 80px;
+    bottom: 16px;
+    left: 16px;
+    width: auto;
+  }
+
+  .theme-toggle-btn {
+    right: 16px;
+    bottom: 32px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-photo-frame:hover {
+    transform: none;
+  }
 }
