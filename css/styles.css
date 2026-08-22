@@ -485,6 +485,18 @@ a {
   border-radius: 12px;
 }
 
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .page-container {
+    padding-bottom: 48px;
+  }
+
+  .music-player {
+    position: static;
+    margin: 0 80px 24px 24px;
+    width: min(360px, calc(100% - 104px));
+  }
+}
+
 @media (min-width: 901px) {
   .gallery-item:last-child:nth-child(3n + 1) {
     grid-column: 2;
@@ -510,7 +522,6 @@ a {
 
   .page-container {
     padding-right: 16px;
-    padding-bottom: 136px;
     padding-left: 16px;
   }
 
@@ -532,10 +543,8 @@ a {
   }
 
   .music-player {
-    right: 80px;
-    bottom: 16px;
-    left: 16px;
-    width: auto;
+    margin: 0 80px 16px 16px;
+    width: min(360px, calc(100% - 96px));
   }
 
   .theme-toggle-btn {
